@@ -11,7 +11,7 @@ const Banner = () => {
         <img src={logo} alt="logo" className="w-52" />
       </div>
       <div className="z-10">
-        <h1 className="text-3xl md:text-6xl 2xl:text-8xl capitalize font-bold md:w-[700px] 2xl:w-[1200px] px-4 mx-auto textShadow">
+        <h1 className="text-3xl md:text-6xl 2xl:text-8xl capitalize font-bold md:w-[700px] 2xl:w-[1200px] px-4 mx-auto textShadow z-50">
           <HeadAnimation text="Welcome to mountain expedition club" />
         </h1>
         <motion.p
