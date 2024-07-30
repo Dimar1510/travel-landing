@@ -36,7 +36,7 @@ const App = () => {
       <Gallery />
       <Footer />
       <div
-        className={`fixed right-10 bottom-20 transition-all duration-500 ${
+        className={`fixed right-10 bottom-20 transition-all duration-500 z-[100] ${
           showArrow ? "translate-x-0" : "translate-x-20"
         }`}
       >
