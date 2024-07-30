@@ -4,6 +4,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        tall: { raw: "(min-height: 500px)" },
+      },
       backgroundImage: {
         banner:
           "linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../public/images/banner.jpeg')",
