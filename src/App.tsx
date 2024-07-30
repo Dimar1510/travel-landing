@@ -5,6 +5,7 @@ import Gallery from "./components/Gallery/Gallery";
 import Team from "./components/Team/Team";
 import arrowUp from "./assets/arrowUp.svg";
 import { useEffect, useState } from "react";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   const [showArrow, setShowArrow] = useState(false);
@@ -33,7 +34,7 @@ const App = () => {
       <Expedition />
       <Team />
       <Gallery />
-
+      <Footer />
       <div
         className={`fixed right-10 bottom-20 transition-all duration-500 ${
           showArrow ? "translate-x-0" : "translate-x-20"
