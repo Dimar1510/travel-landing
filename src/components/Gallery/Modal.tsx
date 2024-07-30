@@ -5,12 +5,19 @@ interface IProps {
   right: () => void;
   left: () => void;
 }
+// dialog {
+//   width: 100%;
+//   max-width: 100%;
+//   height: fit-content;
+//   position: absolute;
+//   margin-top: 0;
+// }
 
 const Modal = forwardRef<HTMLDialogElement, IProps>((props, ref) => {
   return (
     <dialog
       ref={ref}
-      className="m-auto backdrop:backdrop-brightness-[.25] bg-transparent"
+      className="m-auto backdrop:backdrop-brightness-[.25] bg-transparent w-full max-w-full h-fit "
     >
       <img
         src={props?.image}
