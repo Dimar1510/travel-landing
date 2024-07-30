@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d7d7d7;
+  min-height: 100vh;
+}
+
+h1,
+.about {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+}
+
+.clip {
+  clip-path: polygon(
+    50% 0%,
+    100% 0,
+    100% 35%,
+    100% 70%,
+    76% 84%,
+    50% 100%,
+    25% 85%,
+    0% 70%,
+    0 0,
+    18% 0
+  );
+}
+
+.clip2 {
+  clip-path: polygon(100% 15%, 100% 86%, 0 100%, 0 0);
+}
+
+.textShadow {
+  text-shadow: 10px 10px 35px #000;
+}
+
+.active {
+  position: sticky;
+  top: 0;
+}
+
+@keyframes cloud {
+  0% {
+    transform: translate(-100%);
+  }
+  100% {
+    transform: translate(100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .clip2 {
+    clip-path: none;
+  }
+}
