@@ -1,11 +1,11 @@
 const About = () => {
   return (
-    <section className="py-[3rem] z-[-1] about1" id="about">
+    <section className="py-12 z-[-1] about1" id="about">
       <div className="text-center">
         <span
           className="relative text-center text-3xl 2xl:text-5xl before:content-['']
-          before:absolute before:h-[6rem] before:border-2 before:border-blue-950 before:top-[-3rem]
-          before:right-[62px] before:bottom-24 before:my-auto about 2xl:before:right-[6.5rem]
+          before:absolute before:h-24 before:border-2 before:border-blue-950 before:-top-12
+          before:right-[62px] before:bottom-24 before:my-auto about 2xl:before:right-[100px]
         "
         >
           About us

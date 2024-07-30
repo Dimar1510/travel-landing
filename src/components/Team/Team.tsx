@@ -12,16 +12,16 @@ const Team = () => {
     >
       <div className="w-[90%] lg:w-[85%] mx-auto grid grid-cols-team gap-5">
         {teams.map((team, index) => (
-          <div key={index} className="lg:mt-[-7rem] !z-30 w-full">
+          <div key={index} className="lg:-mt-28 !z-30 w-full">
             <img
               src={team}
               alt="team image"
-              className="w-full h-[23rem] 2xl:h-[30rem] object-cover"
+              className="w-full h-[360px] 2xl:h-[480px] object-cover"
             />
           </div>
         ))}
       </div>
-      <div className="w-[90%] lg:w-[60%] mx-auto bg-blue-950/60 text-white mt-[3rem] p-4 text-center flex flex-col gap-5 rounded-lg">
+      <div className="w-[90%] lg:w-[60%] mx-auto bg-blue-950/60 text-white mt-12 p-4 text-center flex flex-col gap-5 rounded-lg">
         <h1 className="text-2xl lg:text-5xl capitalize">Our leaders</h1>
         <p className="2xl:text-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nihil

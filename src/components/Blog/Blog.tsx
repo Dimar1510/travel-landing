@@ -30,7 +30,7 @@ const data = [
 ];
 const Blog = () => {
   return (
-    <section className="clip2 w-full h-full bg-blogBg bg-no-repeat bg-cover md:mt-[-6rem] flex it justify-center text-white py-[8rem]">
+    <section className="clip2 w-full h-full bg-blogBg bg-no-repeat bg-cover md:-mt-24 flex it justify-center text-white py-32">
       <div className="w-[90%] lg:w-[85%] mx-auto flex flex-wrap gap-5">
         {data.map((blog, index) => (
           <div key={index} className="flex-[100%] md:flex-[25%] md:even:mt-12">

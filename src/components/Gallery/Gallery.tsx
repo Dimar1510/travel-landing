@@ -35,7 +35,7 @@ const settings = {
       },
     },
     {
-      breakpoint: 600,
+      breakpoint: 760,
       settings: {
         slidesToShow: 2,
       },
@@ -81,27 +81,27 @@ const Gallery = () => {
 
   return (
     <>
-      <div
-        className="overflow-hidden p-2 h-[400px] pb-10 flex flex-col justify-center items-center"
+      <section
+        className="overflow-hidden p-2 pb-10 flex flex-col justify-center items-center"
         id="gallery"
       >
-        <h1 className="text-3xl 2xl:text-6xl font-bold capitalize py-4 text-center">
+        <h1 className="text-3xl 2xl:text-4xl font-bold capitalize py-4 text-center">
           See the magical views of mountain peaks
         </h1>
-        <div className="slider-container sm:w-[90%] mx-auto">
+        <div className="slider-container w-full sm:w-[90%] mx-auto">
           <Slider {...settings}>
             {thumbnails.map((image, index) => (
               <img
                 key={index}
                 src={image}
                 alt="gallery image"
-                className="w-full h-[16rem] 2xl:h-[22rem] object-cover p-4 cursor-pointer hover:scale-110 will-change-transform transition-transform duration-300"
+                className="w-full h-64 2xl:h-[350px] object-cover p-4 cursor-pointer hover:scale-110 will-change-transform transition-transform duration-300"
                 onClick={() => handleClick(index)}
               />
             ))}
           </Slider>
         </div>
-      </div>
+      </section>
       <Modal
         ref={modalRef}
         image={images[imageIndex]}
