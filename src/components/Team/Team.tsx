@@ -6,7 +6,10 @@ const teams = [team1, team2, team3];
 
 const Team = () => {
   return (
-    <section className="lg:h-[650px] py-6 lg:py-0 2xl:h-[800px] bg-teamBg bg-cover bg-no-repeat lg:mt-[5rem]">
+    <section
+      className="lg:h-[850px] py-6 lg:py-0 2xl:h-[1000px] bg-teamBg bg-cover bg-no-repeat lg:pt-44"
+      id="team"
+    >
       <div className="w-[90%] lg:w-[85%] mx-auto grid grid-cols-team gap-5">
         {teams.map((team, index) => (
           <div key={index} className="lg:mt-[-7rem] !z-30 w-full">

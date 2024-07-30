@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section className="py-[3rem] z-[-1] about1">
+    <section className="py-[3rem] z-[-1] about1" id="about">
       <div className="text-center">
         <span
           className="relative text-center text-3xl 2xl:text-5xl before:content-['']

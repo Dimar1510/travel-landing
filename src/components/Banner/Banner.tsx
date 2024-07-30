@@ -1,14 +1,16 @@
 import { motion } from "framer-motion";
 import logo from "../../assets/images/logo.png";
 import HeadAnimation from "../Animation/HeadAnimation";
+import Header from "../Header/Header";
 
 const Banner = () => {
   return (
-    <div className="w-full h-screen bg-banner bg-no-repeat bg-center bg-cover clip flex flex-col items-center text-center gap-14 text-white">
-      <div className="mt-16 md:mt-7">
+    <div className="w-full h-screen bg-banner bg-no-repeat bg-center bg-cover clip flex flex-col items-center text-center text-white before:size-full before:absolute before:bg-gradient-to-b before:from-black/50 before:to-black/10">
+      <Header />
+      <div className="mt-16 md:mt-7 mb-14 z-10">
         <img src={logo} alt="logo" className="w-[13rem]" />
       </div>
-      <div>
+      <div className="z-10">
         <h1 className="text-3xl md:text-6xl 2xl:text-8xl capitalize font-bold md:w-[44rem] 2xl:w-[73rem] px-4 mx-auto textShadow">
           <HeadAnimation text="Welcome to mountain expedition club" />
         </h1>

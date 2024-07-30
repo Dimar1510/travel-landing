@@ -29,7 +29,10 @@ const Expedition = () => {
             alt="logo"
             className="w-[8rem] md:w-[12rem] 2xl:w-[16rem] mx-auto invert-[75%]"
           />
-          <h1 className="text-3xl 2xl:text-6xl font-bold capitalize py-4">
+          <h1
+            className="text-3xl 2xl:text-6xl font-bold capitalize py-4"
+            id="blogs"
+          >
             Expedition leader
           </h1>
           <p className="px-6 lg:w-[60rem] 2xl:w-[85rem] mx-auto text-sm md:text-base 2xl:text-lg">
