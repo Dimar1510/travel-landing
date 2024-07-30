@@ -8,11 +8,14 @@ interface IProps {
 
 const Modal = forwardRef<HTMLDialogElement, IProps>((props, ref) => {
   return (
-    <dialog ref={ref} className="m-auto backdrop:backdrop-brightness-[.25]">
+    <dialog
+      ref={ref}
+      className="m-auto backdrop:backdrop-brightness-[.25] bg-transparent"
+    >
       <img
         src={props?.image}
         alt="mountain"
-        className="w-screen max-h-[90svh]"
+        className="w-screen max-h-[90svh] object-contain"
       />
       <button
         className="absolute top-0 right-0 m-2 size-8 text-2xl border-2 border-black rounded-full bg-white/50"
