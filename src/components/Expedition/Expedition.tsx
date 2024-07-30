@@ -3,6 +3,7 @@ import cloud from "../../assets/images/cloud.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
+import Blog from "../Blog/Blog";
 
 const Expedition = () => {
   const contentRef = useRef<HTMLElement>(null);
@@ -14,7 +15,6 @@ const Expedition = () => {
         start: "top top",
         endTrigger: contentRef.current,
         end: "bottom center",
-        markers: true,
         toggleClass: { targets: ".about1", className: "active" },
       },
     });
@@ -27,7 +27,7 @@ const Expedition = () => {
           <img
             src={logo}
             alt="logo"
-            className="w-[8rem] md:w-[12rem] 2xl:w-[16rem] mx-auto"
+            className="w-[8rem] md:w-[12rem] 2xl:w-[16rem] mx-auto invert-[75%]"
           />
           <h1 className="text-3xl 2xl:text-6xl font-bold capitalize py-4">
             Expedition leader
@@ -55,6 +55,7 @@ const Expedition = () => {
         </div>
         <img src={cloud} alt="cloud" className="opacity-30" />
       </div>
+      <Blog />
     </section>
   );
 };
