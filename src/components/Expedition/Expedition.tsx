@@ -33,7 +33,7 @@ const Expedition = () => {
             className="text-3xl 2xl:text-6xl font-bold capitalize py-4"
             id="blogs"
           >
-            Expedition leader
+            Expeditions
           </h1>
           <p className="px-6 lg:w-[60rem] 2xl:w-[85rem] mx-auto text-sm md:text-base 2xl:text-lg">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
@@ -46,14 +46,6 @@ const Expedition = () => {
             sed reiciendis doloremque distinctio tenetur, a amet atque nihil
             quasi doloribus molestias nam dolore unde voluptatem, architecto
             sequi, provident voluptas fugiat non in laudantium perspiciatis.
-            Perferendis, hic ab dolor eos dicta laborum ratione ducimus
-            accusantium vitae tempore veritatis similique minima quasi! Animi,
-            esse reprehenderit nostrum qui expedita dolor nulla itaque ipsam.
-            Unde consequatur in totam nam voluptas dolorem. Amet aperiam ad
-            alias natus omnis atque mollitia earum. Blanditiis exercitationem
-            laudantium magni. Corrupti minus ipsum voluptates quaerat, nostrum
-            eos dicta illum iure blanditiis possimus labore iusto aut doloribus
-            animi cumque obcaecati magnam ex?
           </p>
         </div>
         <img src={cloud} alt="cloud" className="opacity-30" />

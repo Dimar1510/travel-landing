@@ -16,7 +16,7 @@ const pageLinks: { title: string; links: string[] }[] = [
 const Footer = () => {
   return (
     <footer>
-      <div className="flex px-8 py-8 justify-evenly gap-16 flex-col lg:flex-row">
+      <div className="flex px-8 py-8 justify-evenly gap-16 flex-col lg:flex-row  border-y border-blue-900">
         <div className="flex gap-8 justify-center phone:flex-col">
           {pageLinks.map((list) => (
             <ul key={list.title} className="flex flex-col gap-4">

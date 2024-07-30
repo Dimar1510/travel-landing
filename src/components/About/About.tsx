@@ -32,7 +32,7 @@ const About = () => {
             placeat sint iusto?
           </p>
 
-          <button className="bg-blue-950 text-white py-2 px-5 hover:bg-blue-800 text-sm self-start">
+          <button className="bg-blue-950 text-white py-2 px-5 hover:bg-blue-800 text-sm  md:self-start">
             Read More
           </button>
         </div>

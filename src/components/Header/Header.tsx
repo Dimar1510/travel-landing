@@ -17,6 +17,11 @@ const Header = () => {
             Our team
           </a>
         </li>
+        <li>
+          <a href="#gallery" className="hover:underline underline-offset-4">
+            Gallery
+          </a>
+        </li>
       </ul>
     </header>
   );
