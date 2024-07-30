@@ -1,5 +1,11 @@
+import Banner from "./components/Banner/Banner";
+
 const App = () => {
-  return <div className="text-red-400 h-svh bg-teamBg">Hey</div>;
+  return (
+    <>
+      <Banner />
+    </>
+  );
 };
 
 export default App;
