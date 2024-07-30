@@ -10,15 +10,15 @@ const Modal = forwardRef<HTMLDialogElement, IProps>((props, ref) => {
   return (
     <dialog
       ref={ref}
-      className="m-auto backdrop:backdrop-brightness-[.25] size-[300px] "
+      className="m-auto backdrop:backdrop-brightness-[.25] min-w-[300px] min-h-[300px] h-[90svh]"
     >
       <img
         src={props?.image}
         alt="mountain"
-        className="size-[100px]"
+        className="size-full object-cover"
         loading="lazy"
       />
-      {/*
+
       <button
         className="absolute top-0 right-0 m-2 size-10 text-2xl border-2 border-black rounded-full bg-white/50 flex items-center justify-center"
         onClick={props.onClose}
@@ -38,7 +38,7 @@ const Modal = forwardRef<HTMLDialogElement, IProps>((props, ref) => {
         onClick={props.left}
       >
         <i className="bx bx-chevron-left"></i>
-      </button> */}
+      </button>
     </dialog>
   );
 });
