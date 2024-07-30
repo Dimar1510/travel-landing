@@ -5,21 +5,14 @@ interface IProps {
   right: () => void;
   left: () => void;
 }
-// dialog {
-//   width: 100%;
-//   max-width: 100%;
-//   height: fit-content;
-//   position: absolute;
-//   margin-top: 0;
-// }
 
 const Modal = forwardRef<HTMLDialogElement, IProps>((props, ref) => {
   return (
     <dialog
       ref={ref}
-      className="m-auto backdrop:backdrop-brightness-[.25] bg-transparent w-full max-w-full h-fit "
+      className="m-auto backdrop:backdrop-brightness-[.25] size-[300px] "
     >
-      <img
+      {/* <img
         src={props?.image}
         alt="mountain"
         className="w-screen max-h-[90svh] object-contain"
@@ -44,7 +37,7 @@ const Modal = forwardRef<HTMLDialogElement, IProps>((props, ref) => {
         onClick={props.left}
       >
         <i className="bx bx-chevron-left"></i>
-      </button>
+      </button> */}
     </dialog>
   );
 });
