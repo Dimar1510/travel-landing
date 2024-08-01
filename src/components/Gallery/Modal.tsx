@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { forwardRef, useState } from "react";
 interface IProps {
   image: string;
   onClose: () => void;
@@ -7,16 +7,21 @@ interface IProps {
 }
 
 const Modal = forwardRef<HTMLDialogElement, IProps>((props, ref) => {
+  const [loading, setLoading] = useState(true);
+
   return (
     <dialog
       ref={ref}
       className="m-auto backdrop:backdrop-brightness-[.25] min-w-[300px] min-h-[300px] h-[90svh]"
     >
+      <div className={`${loading ? "block" : "hidden"} flex justify-center`}>
+        Loading
+      </div>
       <img
         src={props?.image}
         alt="mountain"
-        className="size-full object-cover"
-        loading="lazy"
+        className={`${loading ? "hidden" : "block"} size-full object-cover`}
+        onLoad={() => setLoading(false)}
       />
 
       <button
