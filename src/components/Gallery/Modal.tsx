@@ -26,7 +26,7 @@ const Modal = forwardRef<HTMLDialogElement, IProps>(
     return (
       <dialog
         ref={ref}
-        className="m-auto backdrop:backdrop-brightness-[.25] min-w-[300px] min-h-[300px] h-[90svh] bg-gray-400"
+        className="m-auto backdrop:backdrop-brightness-[.25] min-w-[300px] min-h-[300px] w-full h-[90svh] bg-gray-400"
         onKeyDown={(e) => {
           if (e.key === "ArrowRight") right();
           if (e.key === "ArrowLeft") left();

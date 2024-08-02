@@ -79,6 +79,20 @@ const Gallery = () => {
     modalRef.current?.close();
   };
 
+  modalRef.current?.addEventListener("click", (e) => {
+    if (modalRef.current) {
+      const dialogDimensions = modalRef.current.getBoundingClientRect();
+      if (
+        e.clientX < dialogDimensions.left ||
+        e.clientX > dialogDimensions.right ||
+        e.clientY < dialogDimensions.top ||
+        e.clientY > dialogDimensions.bottom
+      ) {
+        modalRef.current.close();
+      }
+    }
+  });
+
   return (
     <>
       <section
