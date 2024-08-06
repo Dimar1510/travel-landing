@@ -13,7 +13,7 @@ import thumb6 from "../../assets/images/gallery/thumbnails/6.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Modal from "./Modal";
 
 const images = [image1, image2, image3, image4, image5, image6];
@@ -52,11 +52,11 @@ const settings = {
 const Gallery = () => {
   const [imageIndex, setImageIndex] = useState(0);
 
-  const modalRef = useRef<HTMLDialogElement>(null);
+  const dialogRef = useRef<HTMLDialogElement>(null);
 
   const handleClick = (index: number) => {
     setImageIndex(index);
-    modalRef.current?.showModal();
+    dialogRef.current?.showModal();
   };
 
   const handleLeft = () => {
@@ -76,21 +76,26 @@ const Gallery = () => {
   };
 
   const handleClose = () => {
-    modalRef.current?.close();
+    dialogRef.current?.close();
   };
 
-  modalRef.current?.addEventListener("click", (e) => {
-    if (modalRef.current) {
-      const dialogDimensions = modalRef.current.getBoundingClientRect();
-      if (
-        e.clientX < dialogDimensions.left ||
-        e.clientX > dialogDimensions.right ||
-        e.clientY < dialogDimensions.top ||
-        e.clientY > dialogDimensions.bottom
-      ) {
-        modalRef.current.close();
+  useEffect(() => {
+    const closeOnOutsideClick = (e: MouseEvent) => {
+      if (dialogRef.current) {
+        const dialogDimensions = dialogRef.current.getBoundingClientRect();
+        if (
+          e.clientX < dialogDimensions.left ||
+          e.clientX > dialogDimensions.right ||
+          e.clientY < dialogDimensions.top ||
+          e.clientY > dialogDimensions.bottom
+        ) {
+          dialogRef.current.close();
+        }
       }
-    }
+    };
+    dialogRef.current?.addEventListener("click", closeOnOutsideClick);
+    return () =>
+      dialogRef.current?.removeEventListener("click", closeOnOutsideClick);
   });
 
   return (
@@ -117,7 +122,7 @@ const Gallery = () => {
         </div>
       </section>
       <Modal
-        ref={modalRef}
+        ref={dialogRef}
         image={images[imageIndex]}
         onClose={handleClose}
         left={handleLeft}
